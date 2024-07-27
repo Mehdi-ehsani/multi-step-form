@@ -1,0 +1,373 @@
+:root {
+	--primeryColor: #4a3aff;
+	--gray: #eff0f6;
+	--dark-gray: #d9dbe9;
+	--text-color: #6f6c90;
+	--dark-text-color: #170f49;
+    --white: #ffffff;
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+.progress-bar-container {
+	width: fit-content;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	margin: 20px auto;
+}
+.progress-bar-circle {
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: var(--gray);
+	transition: 0.1s ease-in-out;
+	text-align: center;
+	line-height: 34px;
+	color: var(--text-color);
+}
+.progress-bar-circle.active {
+	background: var(--primeryColor);
+	color: var(--gray);
+	transition-delay: 0.3s;
+}
+.progress-bar-circle.diActive {
+	border-color: #333;
+	transition-delay: 0s;
+}
+.progress-bar-line {
+	width: 98px;
+	height: 6px;
+	background: var(--gray);
+	border-radius: 6px;
+	position: relative;
+}
+.progress-bar-line::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 0%;
+	height: 100%;
+	border-radius: 6px;
+	background: var(--primeryColor);
+	transition: 0.3s ease-in-out;
+}
+.progress-bar-line.active::before {
+	width: 100%;
+}
+.progress-bar-line.diActive::before {
+	width: 0;
+	transition-delay: 0.1s;
+}
+.next-btn,
+.prev-btn {
+	width: 60px;
+	height: 35px;
+	border: none;
+	border-radius: 9px;
+	background: var(--primeryColor);
+	cursor: pointer;
+}
+
+.next-btn.deActive,
+.prev-btn.deActive {
+	opacity: 0%;
+}
+
+.form {
+	width: 700px;
+	height: 656px;
+	box-shadow: 0 5px 16px 0 #080f3410;
+	border-radius: 34px;
+    position: relative;
+}
+.line {
+	width: 628px;
+	height: 1px;
+	background: var(--dark-gray);
+	margin: auto;
+}
+
+.slide {
+	width: 628px;
+	margin: auto;
+}
+.slide:nth-child(4) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 90px;
+}
+.slide:nth-child(4) p{
+	width: 420px;
+	text-align: center;
+	line-height: 1.6rem;
+}
+.slide:nth-child(4) h2{
+	margin-top: 10px;
+}
+.slide p,
+.slide h2 {
+	color: var(--dark-text-color);
+}
+.slide h2 {
+	margin: 90px 0px 20px;
+}
+.slide p {
+	margin-bottom: 40px;
+	font-size: 1rem;
+	color: var(--text-color);
+}
+.slide-inputs {
+	display: grid;
+	align-items: center;
+	justify-content: space-between;
+	grid-template-columns: 284px 284px;
+	gap: 30px 20px;
+}
+.inputs-container {
+	width: fit-content;
+}
+.input {
+	width: 284px;
+	height: 66px;
+	border-radius: 46px;
+	box-shadow: 0 2px 6px 0 #13124211;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 5px;
+}
+.input input {
+	width: 75%;
+	height: 40px;
+	border: none;
+	outline: none;
+	color: var(--text-color);
+	font-size: 1rem;
+}
+.input input::placeholder {
+	font-size: 1rem;
+	color: var(--text-color);
+	font-family: sans-serif;
+}
+.inputs-container p {
+	color: var(--dark-text-color);
+	font-weight: 600;
+	margin-left: 0px;
+	margin-bottom: 10px;
+}
+.btn-container {
+	width: 100%;
+	padding: 0 36px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    position: absolute;
+    bottom: 40px;
+}
+.next-btn , .prev-btn {
+    width: 165px;
+    height: 66px;
+    border-radius: 56px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--white);
+}
+.prev-btn {
+	border: 2px solid var(--primeryColor);
+	color: var(--primeryColor);
+	background: var(--white);
+}
+.services-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 20px;
+}
+.service {
+	width: 100%;
+	height: 114px;
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 0 20px;
+	box-shadow: 0 2px 6px 0 #13124211;
+}
+.service:nth-child(1) , .service:nth-child(1) label::before {
+	border: 2px solid var(--primeryColor);
+}
+.service p {
+	margin: 0;
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--dark-text-color);
+}
+.service input {
+	display: none;
+}
+.service label {
+	display: block;
+	width: 25px;
+	position: relative;
+	user-select: none;
+	cursor: pointer;;
+}
+
+.service label::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 20px;
+	height: 20px;
+	transform: translateY(-50%);
+	border: 2px solid var(--dark-gray);
+	border-radius: 50%;
+	background: linear-gradient(125deg , var(--white) , var(--gray));
+}
+@media (max-width: 780px) {
+	.form {
+		width: 90%;
+		height: fit-content;
+	}
+	.line {
+		width: 80%;
+	}
+	.slide {
+	   width: 100%;
+       display: flex;
+	   flex-direction: column;
+	   align-items: center;
+	   margin-bottom: 120px;
+	}
+	.slide h2 {
+		margin-top: 20px;
+	}
+	.slide-inputs  {
+		width: 100%;
+		grid-template-columns: 1fr;
+		align-items: center;
+		justify-content: center;
+	}
+	.inputs-container {
+		width: 80%;
+		margin: auto;
+	}
+	.input {
+		width: 100%;
+	}
+	.progress-bar-line {
+		width: 60px;
+	}
+	.btn-container {
+		width: 80%;
+		margin:10px calc(20% / 2);
+		padding: 0;
+	}
+	.next-btn , .prev-btn {
+		width: 140px;
+		height: 50px;
+	}
+	.services-container {
+		width: 80%;
+		grid-template-columns: 1fr 1fr;
+		gap: 10px;
+	}
+	.service {
+		height: 80px;
+	}
+	.service p {
+		font-size: 1rem;
+	}
+	
+}
+@media (max-width: 640px) {
+	.services-container {
+		grid-template-columns: 1fr;
+	}
+	.service img {
+		width: 50px;
+	}
+	
+}
+@media (max-width: 480px) {
+	.form {
+		width: 90%;
+	}
+	.line {
+		width: 90%;
+	}
+	.slide p {
+		width: 90%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.slide h2 {
+		margin: 15px auto;
+	}
+	.progress-bar-container {
+		gap: 7px;
+		margin: 10px auto;
+	}
+	.progress-bar-circle {
+		width: 28px;
+		height: 28px;
+		line-height: 28px;
+	}
+	.progress-bar-line {
+	    width: 40px;
+		height: 4px;
+	}
+	.slide-inputs {
+		gap: 13px;
+	}
+	.inputs-container {
+		width: 90%;
+	}
+	.inputs-container p {
+		width: fit-content;
+	}
+	.input {
+		height: 53px;
+	}
+	.btn-container {
+		width: 90%;
+		margin: 10px calc(10% / 2);
+	}
+	.prev-btn , .next-btn {
+		width: 110px;
+		height: 40px;
+	}
+	.services-container {
+		width: 90%;
+	}
+	.service p {
+		width: fit-content;
+		margin: 0;
+	}
+	.slide:nth-child(3) h2{
+       font-size: 1.3rem;
+	}
+	.slide:nth-child(4) h2 {
+		font-size: 1.3rem;
+	}
+	.slide:nth-child(4) p {
+		width: 90%;
+	}
+	
+	
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>multi-step form</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<form class="form">
+			<div class="progress-bar-container">
+				<div class="progress-bar-circle" id="1">1</div>
+				<div class="progress-bar-line"></div>
+				<div class="progress-bar-circle" id="2">2</div>
+				<div class="progress-bar-line"></div>
+				<div class="progress-bar-circle" id="3">3</div>
+				<div class="progress-bar-line"></div>
+				<div class="progress-bar-circle" id="4">4</div>
+			</div>
+			<div class="line"></div>
+			<div class="slide-container">
+				<div class="slide" >
+					<h2>Contact details</h2>
+					<p>Lorem ipsum dolor sit amet consectetur adipisc.</p>
+					<div class="slide-inputs">
+						<div class="inputs-container">
+							<p>Name</p>
+							<div class="input">
+								<input type="text" placeholder="John Carter"  />
+								<img src="image/user-icon.webp" alt="icon" />
+							</div>
+						</div>
+						<div class="inputs-container">
+							<p>Email</p>
+							<div class="input">
+								<input type="text" placeholder="Email address"  />
+								<img src="image/mail-icon.webp" alt="icon" />
+							</div>
+						</div>
+						<div class="inputs-container">
+							<p>Phone Number</p>
+							<div class="input">
+		 						<input type="text" placeholder="(123) 456 - 7890"  />
+								<img src="image/phone-icon.webp" alt="icon" />
+							</div>
+						</div>
+						<div class="inputs-container">
+							<p>Company</p>
+							<div class="input">
+								<input type="text" placeholder="Company name"  />
+								<img src="image/apartment-icon.webp" alt="icon" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slide" >
+					<h2>Our services</h2>
+					<p>Please select which service you are interested in.</p>
+					<div class="services-container">
+						<div class="service">
+							<img src="./image/development.webp" alt="icon" />
+							<p>Development</p>
+						</div>
+						<div class="service">
+							<img src="./image/web-design.webp" alt="icon" />
+							<p>Web Design</p>
+						</div>
+						<div class="service">
+							<img src="./image/marketing.webp" alt="icon" />
+							<p>Marketing</p>
+						</div>
+						<div class="service">
+							<img src="./image/other.webp" alt="icon" />
+							<p>Other</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide" >
+					<h2>What’s your project budget?</h2>
+					<p>Please select the project budget range you have in mind.</p>
+					<div class="services-container">
+						<div class="service">
+							<input type="radio" id="radio-1" />
+							<label for="radio-1"></label>
+							<p>$5.000 - $10.000</p>
+						</div>
+						<div class="service">
+							<input type="radio" id="radio-2" />
+							<label for="radio-2"></label>
+							<p>$10.000 - $20.000</p>
+						</div>
+						<div class="service">
+							<input type="radio" id="radio-3" />
+							<label for="radio-3"></label>
+							<p>$20.000 - $50.000</p>
+						</div>
+						<div class="service">
+							<input type="radio" id="radio-4" />
+							<label for="radio-4"></label>
+							<p>$50.000 +</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="slide">
+					<img src="./image/end-icon.webp" alt="icon" />
+					<h2>Submit your quote request</h2>
+					<p>
+						Please review all the information you previously typed in the past
+						steps, and if all is okay, submit your message to receive a project
+						quote in 24 - 48 hours.
+					</p>
+				</div>
+			</div>
+			<div class="btn-container">
+				<button class="prev-btn">prev</button>
+				<button class="next-btn">next</button>
+			</div>
+		</form>
+		<script src="./main.js"></script>
+	</body>
+</html>
